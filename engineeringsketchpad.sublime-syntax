@@ -1,0 +1,82 @@
+%YAML 1.2
+# See http://www.sublimetext.com/docs/3/syntax.html
+---
+name: Engineering Sketch Pad
+file_extensions: [csm]
+scope: source.engineeringsketchpad
+
+variables:
+  #ident: '[A-Za-z_][A-Za-z_0-9]*'
+  identifier_continue: '[[:alnum:]_]'
+  identifier: '\b[[:alpha:]_]{{identifier_continue}}*\b'
+
+contexts:
+  main:
+    # Strings begin and end with quotes, and use backslashes as an escape
+    # character
+    - match: '"'
+      scope: punctuation.definition.string.begin
+      push: double_quoted_string
+
+    - match: '#'
+      scope: punctuation.definition.comment
+      push: line_comment
+
+    # Numbers
+    - match: '\b(-)?[0-9.]+\b'
+      scope: constant.numeric
+
+    # ESP-specific below this point
+
+    # Primitives
+    - match: '\b(point|box|sphere|cone|cylinder|torus|import|restore|udprim)\b'
+      scope: keyword
+
+    # Grown
+    - match: '\b(extrude|rule|blend|revolve|sweep)\b'
+      scope: keyword
+
+    # Applied
+    - match: '\b(fillet|chamfer|hollow)\b'
+      scope: keyword
+
+    # Booleans
+    - match: '\b(intersect|subtract|union|join|connect|extract|combine)\b'
+      scope: variable.function
+
+    # Transform
+    - match: '\b(translate|rotatex|rotatey|rotatez|scale|mirror|applycsys|reorder)\b'
+      scope: variable.function
+
+    # Sketch
+    - match: '\b(skbeg|skvar|skcon|linseg|cirarc|arc|spline|bezier|skend)\b'
+      scope: keyword
+
+    # Solver
+    - match: '\b(solbeg|solcon|solend)\b'
+      scope: keyword
+
+    # Utilities
+    - match: '\b(end|assert|udparg|mark|group|patbeg|patbreak|patend|evaluate|ifthen|elseif|else|endif|store|dump|select|getattr|project|throw|catbeg|catend)\b'
+      scope: keyword
+
+    # Declarations
+    - match: '\b(conpmtr|despmtr|outpmtr|lbound|ubound|dimension|name|attribute|csystem|interface|set)\b'
+      scope: entity.name.function
+
+    # Variables
+    - match: '\b{{identifier}}\b'
+      scope: variable.language
+
+  double_quoted_string:
+    - meta_scope: string.quoted.double
+    - match: '\\.'
+      scope: constant.character.escape
+    - match: '"'
+      scope: punctuation.definition.string.end
+      pop: true
+
+  line_comment:
+    - meta_scope: comment.line
+    - match: $
+      pop: true
