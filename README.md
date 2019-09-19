@@ -14,5 +14,8 @@ Installation can be done in less than a minute. Simply copy all files in this re
 ## Usage
 Open an ESP geometry file (\*.csm) in Sublime Text. Check the language used by checking the right-hand side of the bottom toolbar. If it doesn't say "Engineering Sketch Pad", click on the language listed to bring up a pop-up menu. Select "Engineering Sketch Pad" to highlight your syntax.
 
+## Example
+![Example](example.png)
+
 ## Disclaimers
 Only tested on Sublime Text 3.2.1 in Windows 10.
