@@ -5,7 +5,7 @@ Provides syntax highlighting and comment rules for using Sublime Text with Engin
 * Engineering Sketch Pad is a powerful, user-friendly geometry tool available through MIT's Aerospace Computational Design Laboratory (ACDL): https://acdl.mit.edu/ESP/. Developed by Bob Haimes and John Dannenhoffer.
 
 ## Installation Instructions
-Simply copy all files in this repository to your Sublime Text package directory. Typically this is found at:
+Installation can be done in less than a minute. Simply copy all files in this repository to your Sublime Text package directory. Typically this is found at:
 
 * Windows: C:\Users\<YourUsername>\AppData\Roaming\Sublime Text 3\Packages\User
 * Mac:
