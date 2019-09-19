@@ -7,7 +7,7 @@ Provides syntax highlighting and comment rules for using Sublime Text with Engin
 ## Installation Instructions
 Installation can be done in less than a minute. Simply copy all files in this repository to your Sublime Text package directory. Typically this is found at:
 
-* Windows: C:\Users\<YourUsername>\AppData\Roaming\Sublime Text 3\Packages\User
+* Windows: `C:\Users\<YourUsername>\AppData\Roaming\Sublime Text 3\Packages\User`
 * Mac:
 * Linux:
 
