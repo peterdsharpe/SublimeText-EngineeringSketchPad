@@ -1,7 +1,7 @@
 # Sublime Text - Engineering Sketch Pad
 Provides syntax highlighting and comment rules for using Sublime Text with Engineering Sketch Pad (ESP) geometry files (\*.csm).
 
-* Sublime Text is a sophisticated free text editor found at https://www.sublimetext.com/.
+* Sublime Text is a sophisticated, free text editor found at https://www.sublimetext.com/.
 * Engineering Sketch Pad is a powerful, user-friendly geometry tool available through MIT's Aerospace Computational Design Laboratory (ACDL): https://acdl.mit.edu/ESP/. Developed by Bob Haimes and John Dannenhoffer.
 
 ## Installation Instructions
